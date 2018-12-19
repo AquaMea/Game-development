@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour {
     public Animator animator;
 
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"), 0.0f);
 

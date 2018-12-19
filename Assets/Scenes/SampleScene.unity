@@ -8042,6 +8042,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.52
       objectReference: {fileID: 0}
+    - target: {fileID: 4111338994451957736, guid: c3353354c0fd37947954e79eb17c8fc8,
+        type: 3}
+      propertyPath: m_Name
+      value: PowerupSpeed
+      objectReference: {fileID: 0}
     - target: {fileID: 4558531517374566980, guid: c3353354c0fd37947954e79eb17c8fc8,
         type: 3}
       propertyPath: m_SortingOrder
