@@ -39,4 +39,34 @@ public class Inventory : MonoBehaviour
         }
         return false;
     }
+    public GameObject FindItemByType(string itemType)
+    {
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            if (inventory[i] != null)
+            {
+                if (inventory[i].GetComponent<InteractionObject>().itemType == itemType)
+                {
+                    return inventory[i];
+                }
+            }
+        }
+        return null;
+    }
+
+    public void RemoveItem(GameObject item)
+    {
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            if (inventory[i] != null)
+            {
+                if (inventory[i] == item)
+                {
+                    inventory[i] = null;
+                    Debug.Log(item.name + " was remove from the inventory");
+                    break;
+                }
+            }
+        }
+    }
 }

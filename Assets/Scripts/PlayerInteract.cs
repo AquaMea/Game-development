@@ -31,7 +31,10 @@ public class PlayerInteract : MonoBehaviour
                         Debug.Log("Opening the door");
                         //Open the door
                         currentInterObjScript.locked = false;
+                        //play the open animation
                         currentInterObjScript.Open();
+                        //remove key after use
+                        inventory.RemoveItem(currentInterObjScript.itemNeeded);
                     }
                     else
                     {
@@ -42,6 +45,18 @@ public class PlayerInteract : MonoBehaviour
                     Debug.Log("Door is open");
                     //Door is already open close it
                 }
+            }
+        }
+        if(Input.GetButtonDown("Use Potion"))
+        {
+            //check the inv for a potion
+            GameObject potion = inventory.FindItemByType("Hpotion");
+            if (potion != null)
+            {
+                //Use the potion and add health
+
+                //Remove the potion
+                inventory.RemoveItem(potion);
             }
         }
     }
