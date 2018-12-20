@@ -28,4 +28,15 @@ public class Inventory : MonoBehaviour
             Debug.Log("inv is full");
         }
     }
+    public bool FindItem(GameObject item)
+    {
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            if(inventory[i] == item)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

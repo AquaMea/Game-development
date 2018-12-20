@@ -19,6 +19,30 @@ public class PlayerInteract : MonoBehaviour
                 inventory.AddItem(currentInterObj);
                 currentInterObj = null;
             }
+            //Check to see if can be opened
+            if(currentInterObjScript.openable)
+            {
+                //Check to see if locked
+                if (currentInterObjScript.locked)
+                { 
+                    //checking if the needed item is in the inventory
+                    if (inventory.FindItem(currentInterObjScript.itemNeeded))
+                    {
+                        Debug.Log("Opening the door");
+                        //Open the door
+                        currentInterObjScript.locked = false;
+                        currentInterObjScript.Open();
+                    }
+                    else
+                    {
+                        Debug.Log("U dont have the key");
+                    }
+                } else
+                {
+                    Debug.Log("Door is open");
+                    //Door is already open close it
+                }
+            }
         }
     }
 
