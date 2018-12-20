@@ -17,13 +17,15 @@ public class Inventory : MonoBehaviour
             {
                 inventory[i] = item;
                 itemAdded = true;
+                //Do something with the obj
+                item.SendMessage("DoInteraction");
                 break;
             }
         }
 
         if (!itemAdded)
         {
-            Debug.Log("inbv is full");
+            Debug.Log("inv is full");
         }
     }
 }
