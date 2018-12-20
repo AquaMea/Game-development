@@ -180,5 +180,10 @@ MonoBehaviour:
   inventory: 0
   openable: 1
   locked: 1
+  examine: 0
+  talk: 0
+  itemType: 
   itemNeeded: {fileID: 0}
+  message: 
+  description: 
   anim: {fileID: 0}
